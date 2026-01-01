@@ -20,11 +20,16 @@ import {
 } from 'lucide-react';
 
 // --- Firebase Configuration ---
-const firebaseConfig = JSON.parse(__firebase_config);
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
-const appId = typeof __app_id !== 'undefined' ? __app_id : 'hash-rythm-final-prod';
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCjKJDLOiYEjvAVHYhzO_a_e9WwMnpDrcc",
+  authDomain: "hash-rythm.firebaseapp.com",
+  projectId: "hash-rythm",
+  storageBucket: "hash-rythm.firebasestorage.app",
+  messagingSenderId: "449247542776",
+  appId: "1:449247542776:web:e027bff8eb1f22c86c6a0d",
+  measurementId: "G-NSYST78B8E"
+};
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('lightning');
